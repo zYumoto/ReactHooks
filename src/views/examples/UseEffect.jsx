@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import PageTitle from "../../components/layout/PageTitle";
 import { useState } from "react";
 import SectionTitle from "../../components/layout/SectionTitle";
-
 function calcFatorial(num) {
   const n = parseInt(num);
   if (n < 0) return -1;
@@ -10,12 +9,6 @@ function calcFatorial(num) {
   return calcFatorial(n - 1) * n;
 }
 
-function verNumberValido(n) {
-  if (n === "") {
-    alert("Digite um numero Valido");
-    window.location.reload();
-  }
-}
 const UseEffect = (props) => {
   //Primeiro Exercicio
   const [number, setNumber] = useState(1);
@@ -27,7 +20,6 @@ const UseEffect = (props) => {
     },
     [number]
   );
-
   useEffect(
     function () {
       if (fatorial > 1000000) {
@@ -63,20 +55,16 @@ const UseEffect = (props) => {
         <input
           type="number"
           className="input"
-          value={verNumberValido(number)}
+          value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
       </div>
-
       <SectionTitle title="Exercicio #02" />
       <div className="center">
         <div>
-          <span className="text">Status: </span>
+        <span className="text">Status: </span>
           <span className="text red">{status}</span>
         </div>
-      </div>
+        </div>
     </div>
-  );
-};
-
-export default UseEffect;
+  
