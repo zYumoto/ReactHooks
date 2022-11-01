@@ -15,8 +15,11 @@ const UseState = (props) => {
                 subtitle="Estado em componentes funcionais!"/>
             <SectionTitle title="Exercicio #01"/>
             <div className="center">
-                <span className="text">{count}</span>
-                <div>
+            <span className="text">
+          {count <= -1
+            ? window.location.reload(alert("Nao aceitamos numeros negativos"))
+            : count}
+        </span>                <div>
                 <button className="btn"
                 onClick={() => setCount(current  => current -1000 )}>-1000</button>
                 <button className="btn"

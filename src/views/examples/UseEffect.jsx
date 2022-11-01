@@ -9,6 +9,13 @@ function calcFatorial(num) {
   return calcFatorial(n - 1) * n;
 }
 
+function verNumberValido(n) {
+  if (n === "") {
+    alert("Digite um numero Valido");
+    window.location.reload();
+  }
+}
+
 const UseEffect = (props) => {
   //Primeiro Exercicio
   const [number, setNumber] = useState(1);
@@ -68,3 +75,5 @@ const UseEffect = (props) => {
         </div>
     </div>
   );
+
+  export default UseEffect
